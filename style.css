@@ -1,0 +1,76 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  background-color: #ffffff;
+}
+
+/* Jumbotron */
+.jumbotron {
+  padding-top: 20%;
+}
+
+/* Menghilangkan margin dan padding di bagian bawah jumbotron */
+.jumbotron svg {
+  margin-bottom: -1px;
+  display: block;
+}
+
+/* About section */
+#about {
+  padding-top: 80px;
+  background-color: #252529;
+  padding-bottom: 80px;
+}
+
+.image-profile {
+  border-radius: 50%;
+  border: thin solid #fff;
+}
+
+.content-media {
+  display: flex;
+  margin-top: 4%;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+/* Footer */
+footer {
+  background: white;
+  padding: 2rem 0;
+}
+
+footer p {
+  margin: 0;
+  color: white;
+  font-size: 1rem;
+}
+
+footer a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffcbcb;
+  font-style: italic;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .content-media {
+    flex-wrap: wrap;
+  }
+
+  .image-profile {
+    margin-bottom: 20px;
+  }
+}
