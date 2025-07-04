@@ -23,15 +23,16 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- My CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
 
-    <title>Portofolio</title>
+    <title>Portofolio Muqniansyah</title>
   </head>
-  <body id="home">
+  <body id="beranda">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg shadow-sm fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#home">Muqniansyah</a>
+        <!-- logo brand -->
+        <a class="navbar-brand" href="#beranda">Muqniansyah</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -43,15 +44,28 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+        <!-- tombol navigasi -->
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#home"
-                >Home</a
+              <a class="nav-link active" aria-current="page" href="#beranda"
+                >Beranda</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
+              <a class="nav-link" href="#tentang">Tentang</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#servis">Servis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#project">Project</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#design">Design</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#kontak">Kontak</a>
             </li>
           </ul>
         </div>
@@ -62,10 +76,10 @@
     <!-- Jumbotron -->
     <header class="jumbotron text-center">
       <h1 class="display-4">Muqniansyah Arifin</h1>
-      <p>Front-End Developer | UI & UX Designer</p>
+      <p>Fullstack Developer | UI & UX Designer</p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
-          fill="#252529"
+          fill="#f8f9fa"
           fill-opacity="1"
           d="M0,160L48,170.7C96,181,192,203,288,197.3C384,192,480,160,576,128C672,96,768,64,864,85.3C960,107,1056,181,1152,192C1248,203,1344,149,1392,122.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
         ></path>
@@ -74,76 +88,266 @@
     <!-- Akhir jumbotron -->
 
     <!-- About -->
-    <section id="about">
+    <section id="tentang" class="py-5 bg-light">
       <div class="container">
-        <div class="row text-center mb-5">
-          <div class="col">
-            <h2 class="text-white">About Me</h2>
+        <div class="row align-items-center justify-content-center gy-5">
+          <!-- Teks Deskripsi -->
+          <div class="col-lg-6">
+            <p class="text-primary fw-semibold mb-1">Halo Semua 👋, saya</p>
+            <h1 class="fw-bold mb-3" style="font-size: 2.5rem">
+              Muqniansyah Arifin
+            </h1>
+            <p class="text-secondary mb-4">
+              Memiliki kemampuan yang sangat baik dalam Javascript, serta mampu
+              mendesain website yang menarik, responsif, dan mudah digunakan.
+            </p>
+            <a href="#kontak" class="btn btn-primary btn-lg rounded-pill px-4">
+              Hubungi Saya
+            </a>
           </div>
-        </div>
 
-        <div class="row justify-content-center align-items-center">
-          <!-- Bagian gambar profil -->
-          <div
-            class="col-md-4 text-center"
-            data-aos="fade-right"
-            data-aos-duration="1000"
-          >
-            <div class="profile-container">
+          <!-- Foto Profil -->
+          <div class="col-lg-5 text-center">
+            <div class="position-relative d-inline-block">
+              <div
+                class="position-absolute top-50 start-50 translate-middle bg-warning rounded-circle"
+                style="width: 250px; height: 250px; z-index: 1"
+              ></div>
               <img
-                src="img/profil.png"
-                alt="Muqniansyah"
-                width="250"
-                class="image-profile"
+                src="img/about.png"
+                alt="Muqniansyah Arifin"
+                class="img-fluid position-relative rounded-circle"
+                style="width: 250px; z-index: 2"
               />
             </div>
           </div>
-
-          <!-- Bagian deskripsi -->
-          <div class="col-md-6" data-aos="fade-left" data-aos-duration="1000">
-            <p class="text-white fs-5">
-              "Muqniansyah Arifin adalah seorang Front-End Developer dan UI/UX
-              Designer yang berumur 20 tahun. Fokusnya adalah pada pengembangan
-              web interaktif dan desain antarmuka. Menguasai HTML, CSS,
-              JavaScript ES6, serta framework modern seperti Bootstrap dan
-              Tailwind CSS. Muqni juga memiliki keahlian dalam animasi web
-              menggunakan AOS dan GSAP. Ia berpengalaman dalam membuat mockup
-              dan wireframe menggunakan Figma, serta mengelola proyek
-              menggunakan Git dan GitHub."
-            </p>
-          </div>
-        </div>
-
-        <!-- Tombol untuk hubungi saya -->
-        <div class="content-media">
-          <a
-            href="mailto:muqniansyah@gmail.com"
-            class="btn btn-outline-light w-100"
-          >
-            <i class="bi bi-envelope"></i> Email
-          </a>
-
-          <a href="tel:+6289607886367" class="btn btn-outline-light w-100">
-            <i class="bi bi-telephone"></i> Telepon
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/muqniansyah-a-a15b20244/"
-            class="btn btn-outline-light w-100"
-          >
-            <i class="bi bi-linkedin"></i> LinkedIn
-          </a>
-
-          <a
-            href="https://instagram.com/mniyy.dev"
-            class="btn btn-outline-light w-100"
-          >
-            <i class="bi bi-instagram"></i> Instagram
-          </a>
         </div>
       </div>
     </section>
-    <!-- Akhir about -->
+    <!-- Akhir About -->
+
+    <!-- servis -->
+    <section id="servis" class="servis py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h4 class="fw-semibold text-primary mb-2">Servis</h4>
+          <h2 class="fw-bold text-dark display-5 mb-4">Tulisan Terkini</h2>
+          <p class="fw-medium text-secondary">
+            Tulisan Tulisan blog yang diketik oleh saya
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <div class="card shadow-sm h-100">
+              <img
+                src="https://source.unsplash.com/368x200?programming"
+                class="card-img-top"
+                alt="programming"
+              />
+              <div class="card-body">
+                <h5 class="card-title fw-semibold">
+                  <a href="#" class="text-decoration-none text-dark"
+                    >Programming</a
+                  >
+                </h5>
+                <p class="card-text text-secondary">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel,
+                  rem esse. Nam.
+                </p>
+                <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-4">
+            <div class="card shadow-sm h-100">
+              <img
+                src="https://source.unsplash.com/368x200?Coffe"
+                class="card-img-top"
+                alt="kopi"
+              />
+              <div class="card-body">
+                <h5 class="card-title fw-semibold">
+                  <a href="#" class="text-decoration-none text-dark">Kopi</a>
+                </h5>
+                <p class="card-text text-secondary">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel,
+                  rem esse. Nam.
+                </p>
+                <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-4">
+            <div class="card shadow-sm h-100">
+              <img
+                src="https://source.unsplash.com/368x200?water"
+                class="card-img-top"
+                alt="Air"
+              />
+              <div class="card-body">
+                <h5 class="card-title fw-semibold">
+                  <a href="#" class="text-decoration-none text-dark">Air</a>
+                </h5>
+                <p class="card-text text-secondary">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel,
+                  rem esse. Nam.
+                </p>
+                <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- akhir servis -->
+
+    <!-- project -->
+    <section id="project" class="project pt-5 pb-4 bg-light">
+      <div class="container">
+        <div class="text-center mb-4">
+          <h4 class="fw-semibold text-primary mb-2">Portfolio</h4>
+          <h2 class="fw-bold text-dark display-5 mb-4">Project Terbaru</h2>
+          <p class="fw-medium text-secondary">
+            Project ini ialah hasil dari studi kasus orang lain maupun diri
+            sendiri yang saya tangani dan selesaikan.
+          </p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+              <img
+                src="./dist/img/portofolio/CompanyProfile.PNG"
+                class="card-img-top"
+                alt="Company Profile"
+              />
+              <div class="card-body">
+                <h5 class="card-title fw-semibold">Company Profile</h5>
+                <p class="card-text text-secondary">
+                  Website Company Profile sederhana yang dibuat dengan
+                  menggunakan html, css, dan materialize
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+              <img
+                src="./dist/img/portofolio/LandingPage.PNG"
+                class="card-img-top"
+                alt="Landing Page"
+              />
+              <div class="card-body">
+                <h5 class="card-title fw-semibold">Landing Page</h5>
+                <p class="card-text text-secondary">
+                  Website Landing page dibuat dengan menggunakan html, css
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+              <img
+                src="./dist/img/portofolio/Vcard.PNG"
+                class="card-img-top"
+                alt="V-card"
+              />
+              <div class="card-body">
+                <h5 class="card-title fw-semibold">V-card</h5>
+                <p class="card-text text-secondary">
+                  Website V-card dengan menggunakan html, css
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+              <img
+                src="./dist/img/portofolio/wedding.PNG"
+                class="card-img-top"
+                alt="wedding"
+              />
+              <div class="card-body">
+                <h5 class="card-title fw-semibold">Wedding Website</h5>
+                <p class="card-text text-secondary">
+                  Website pernikahan dengan menggunakan html, css, dan
+                  bootstrap.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- akhir project -->
+
+    <!-- kontak -->
+    <section id="kontak" class="kontak py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h4 class="fw-semibold text-primary mb-2">Contact</h4>
+          <h2 class="fw-bold text-dark display-5 mb-4">Hubungi Saya</h2>
+          <p class="fw-medium text-secondary">
+            Jika ada saran atau keperluan pribadi, silahkan isi dibawah ini
+          </p>
+        </div>
+
+        <form>
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="mb-4">
+                <label for="name" class="form-label fw-bold text-primary"
+                  >Nama</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  class="form-control"
+                  placeholder="Masukkan nama Anda"
+                />
+              </div>
+
+              <div class="mb-4">
+                <label for="email" class="form-label fw-bold text-primary"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="form-control"
+                  placeholder="Masukkan email Anda"
+                />
+              </div>
+
+              <div class="mb-4">
+                <label for="message" class="form-label fw-bold text-primary"
+                  >Pesan</label
+                >
+                <textarea
+                  id="message"
+                  class="form-control"
+                  rows="5"
+                  placeholder="Tulis pesan Anda"
+                ></textarea>
+              </div>
+
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg">
+                  Kirim
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- akhir kontak -->
 
     <!-- Footer -->
     <footer class="text-center pb-5">
