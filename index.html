@@ -62,7 +62,7 @@
               <a class="nav-link" href="#project">Project</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#design">Design</a>
+              <a class="nav-link" href="#design">Desain</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#kontak">Kontak</a>
@@ -101,9 +101,41 @@
               Memiliki kemampuan yang sangat baik dalam Javascript, serta mampu
               mendesain website yang menarik, responsif, dan mudah digunakan.
             </p>
-            <a href="#kontak" class="btn btn-primary btn-lg rounded-pill px-4">
-              Hubungi Saya
-            </a>
+
+            <!-- Tujuan Karir -->
+            <div class="mb-3">
+              <h5 class="fw-semibold text-dark">🎯 Tujuan Karir</h5>
+              <p class="text-secondary mb-2">
+                Menjadi Fullstack Developer profesional yang dapat membantu
+                bisnis berkembang melalui solusi digital yang inovatif.
+              </p>
+            </div>
+
+            <!-- Visi -->
+            <div class="mb-4">
+              <h5 class="fw-semibold text-dark">🚀 Visi</h5>
+              <p class="text-secondary">
+                Menciptakan pengalaman digital yang sederhana, cepat, dan
+                menyenangkan bagi pengguna.
+              </p>
+            </div>
+
+            <!-- Tombol Aksi -->
+            <div class="d-flex flex-wrap gap-2">
+              <a
+                href="#kontak"
+                class="btn btn-primary btn-lg rounded-pill px-4"
+              >
+                Hubungi Saya
+              </a>
+              <a
+                href="./cv/cv-muqniansyah.pdf"
+                download
+                class="btn btn-outline-primary btn-lg rounded-pill px-4"
+              >
+                <i class="bi bi-download"></i> Download CV
+              </a>
+            </div>
           </div>
 
           <!-- Foto Profil -->
@@ -315,12 +347,30 @@
               </div>
             </div>
           </div>
+
+          <!-- project-6 -->
+          <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+              <img
+                src="./img/portofolio/notesapp-react.PNG"
+                class="card-img-top"
+                alt="wedding"
+              />
+              <div class="card-body">
+                <h5 class="card-title fw-semibold">React Notes App</h5>
+                <p class="card-text text-secondary">
+                  Website aplikasi catatan dengan menggunakan html, css, react,
+                  vite dan javascript
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <!-- akhir project -->
 
-    <!-- Design Section -->
+    <!-- desain -->
     <section id="design" class="py-5 bg-light">
       <div class="container">
         <div class="text-center mb-5">
@@ -392,7 +442,42 @@
         </div>
       </div>
     </section>
-    <!-- Akhir Design Section -->
+    <!-- akhir desain -->
+
+    <!-- social media -->
+    <section id="social-media" class="py-5 bg-primary text-white">
+      <div class="container text-center">
+        <h2 class="fw-bold mb-4">Terhubung dengan Saya</h2>
+        <p class="mb-4">
+          Yuk, ikuti saya di media sosial untuk mendapatkan update terbaru
+          seputar project dan aktivitas saya.
+        </p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a
+            href="https://github.com/Muqniansyah"
+            target="_blank"
+            class="btn btn-light btn-lg"
+          >
+            <i class="bi bi-github"></i> GitHub
+          </a>
+          <a
+            href="https://instagram.com/mniyy.dev"
+            target="_blank"
+            class="btn btn-light btn-lg"
+          >
+            <i class="bi bi-instagram"></i> Instagram
+          </a>
+          <a
+            href="https://youtube.com/@mniyy"
+            target="_blank"
+            class="btn btn-light btn-lg"
+          >
+            <i class="bi bi-youtube"></i> YouTube
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- akhir social media-->
 
     <!-- kontak -->
     <section id="kontak" class="kontak py-5 bg-light">
@@ -401,11 +486,20 @@
           <h4 class="fw-semibold text-primary mb-2">Kontak</h4>
           <h2 class="fw-bold text-dark display-5 mb-4">Hubungi Saya</h2>
           <p class="fw-medium text-secondary">
-            Jika ada saran atau keperluan pribadi, silahkan isi dibawah ini
+            Jika ada saran atau keperluan pribadi, silahkan isi di bawah ini
           </p>
         </div>
 
-        <form>
+        <form action="https://formsubmit.co/abcd1234efgh5678ijkl" method="POST">
+          <!-- Ganti action dengan alias yang kamu dapat dari FormSubmit -->
+          <input type="hidden" name="_captcha" value="true" />
+          <input
+            type="hidden"
+            name="_subject"
+            value="Pesan Baru dari Website"
+          />
+          <input type="hidden" name="_template" value="table" />
+
           <div class="row justify-content-center">
             <div class="col-lg-8">
               <div class="mb-4">
@@ -415,8 +509,10 @@
                 <input
                   type="text"
                   id="name"
+                  name="name"
                   class="form-control"
                   placeholder="Masukkan nama Anda"
+                  required
                 />
               </div>
 
@@ -427,8 +523,10 @@
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   class="form-control"
                   placeholder="Masukkan email Anda"
+                  required
                 />
               </div>
 
@@ -438,9 +536,11 @@
                 >
                 <textarea
                   id="message"
+                  name="message"
                   class="form-control"
                   rows="5"
                   placeholder="Tulis pesan Anda"
+                  required
                 ></textarea>
               </div>
 
