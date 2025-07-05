@@ -64,6 +64,27 @@ nav {
   border-color: #ff8c00;
 }
 
+.circle-decor {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #ffc107; /* kuning Bootstrap */
+  border-radius: 50%;
+  opacity: 0.7;
+  z-index: 1;
+  animation: float 4s ease-in-out infinite alternate;
+}
+
+/* Animasi melayang */
+@keyframes float {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
 /* Footer */
 footer {
   background: white;
