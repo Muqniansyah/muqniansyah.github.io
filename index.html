@@ -32,7 +32,9 @@
     <nav class="navbar navbar-expand-lg shadow-sm fixed-top">
       <div class="container">
         <!-- logo brand -->
-        <a class="navbar-brand" href="#beranda">Muqniansyah</a>
+        <a class="navbar-brand" href="#beranda"
+          ><img src="./img/logo.png" alt="logo"
+        /></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -166,9 +168,12 @@
     <!-- Akhir About -->
 
     <!-- servis -->
-    <section id="servis" class="servis py-5 bg-light">
+    <section
+      id="servis"
+      class="servis py-5 bg-light position-relative overflow-hidden"
+    >
       <div class="container">
-        <div class="text-center mb-5">
+        <div class="text-center mb-5" data-aos="fade-down">
           <h4 class="fw-semibold text-primary mb-2">Layanan</h4>
           <h2 class="fw-bold text-dark display-5 mb-4">
             Servis yang Saya Tawarkan
@@ -181,7 +186,7 @@
 
         <div class="row">
           <!-- Web Development -->
-          <div class="col-lg-4 mb-4">
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
             <div class="card shadow-sm h-100">
               <img
                 src="./img/servis/servis-1.jpg"
@@ -198,13 +203,12 @@
                   Pembuatan website interaktif, responsif, dan sesuai kebutuhan
                   menggunakan HTML, CSS, JavaScript, dan framework modern.
                 </p>
-                <!-- <a href="#kontak" class="btn btn-primary">Pesan Sekarang</a> -->
               </div>
             </div>
           </div>
 
           <!-- UI/UX Design -->
-          <div class="col-lg-4 mb-4">
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
             <div class="card shadow-sm h-100">
               <img
                 src="./img/servis/servis-2.jpg"
@@ -221,13 +225,12 @@
                   Desain antarmuka yang menarik dan pengalaman pengguna yang
                   intuitif menggunakan Figma.
                 </p>
-                <!-- <a href="#kontak" class="btn btn-primary">Pesan Sekarang</a> -->
               </div>
             </div>
           </div>
 
           <!-- Website Maintenance -->
-          <div class="col-lg-4 mb-4">
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
             <div class="card shadow-sm h-100">
               <img
                 src="./img/servis/servis-3.jpg"
@@ -244,19 +247,29 @@
                   Perawatan dan update website secara berkala untuk memastikan
                   performa dan keamanan tetap optimal.
                 </p>
-                <!-- <a href="#kontak" class="btn btn-primary">Pesan Sekarang</a> -->
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Dekorasi Lingkaran dan Kotak -->
+      <div class="decor-circle"></div>
+      <div class="decor-square"></div>
     </section>
     <!-- akhir servis -->
 
     <!-- project -->
-    <section id="project" class="project pt-5 pb-4 bg-light">
+    <section
+      id="project"
+      class="project pt-5 pb-4 bg-light position-relative overflow-hidden"
+    >
+      <!-- Dekorasi -->
+      <span class="decor-circle" style="top: 10%; left: -60px"></span>
+      <span class="decor-square" style="bottom: 10%; right: -40px"></span>
+
       <div class="container">
-        <div class="text-center mb-4">
+        <div class="text-center mb-4" data-aos="fade-up">
           <h4 class="fw-semibold text-primary mb-2">Portfolio</h4>
           <h2 class="fw-bold text-dark display-5 mb-4">Project Terbaru</h2>
           <p class="fw-medium text-secondary">
@@ -266,8 +279,8 @@
         </div>
 
         <div class="row justify-content-center">
-          <!-- project-1 -->
-          <div class="col-md-6 mb-4">
+          <!-- Project 1 -->
+          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
             <div class="card shadow-sm">
               <img
                 src="./img/portofolio/1.PNG"
@@ -277,15 +290,14 @@
               <div class="card-body">
                 <h5 class="card-title fw-semibold">Company Profile</h5>
                 <p class="card-text text-secondary">
-                  Website Company Profile sederhana yang dibuat dengan
-                  menggunakan html, css, dan materialize
+                  Website Company Profile sederhana yang dibuat dengan HTML,
+                  CSS, dan Materialize.
                 </p>
               </div>
             </div>
           </div>
-
-          <!-- project-2 -->
-          <div class="col-md-6 mb-4">
+          <!-- Project 2 -->
+          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
             <div class="card shadow-sm">
               <img
                 src="./img/portofolio/2.PNG"
@@ -295,79 +307,73 @@
               <div class="card-body">
                 <h5 class="card-title fw-semibold">Landing Page</h5>
                 <p class="card-text text-secondary">
-                  Website Landing page dibuat dengan menggunakan html, css, dan
-                  javascript
+                  Website Landing Page dibuat dengan HTML, CSS, dan JavaScript.
                 </p>
               </div>
             </div>
           </div>
-
-          <!-- project-3 -->
-          <div class="col-md-6 mb-4">
+          <!-- Project 3 -->
+          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
             <div class="card shadow-sm">
               <img
                 src="./img/portofolio/3.PNG"
                 class="card-img-top"
-                alt="V-card"
+                alt="Website Film"
               />
               <div class="card-body">
-                <h5 class="card-title fw-semibold">Website film</h5>
+                <h5 class="card-title fw-semibold">Website Film</h5>
                 <p class="card-text text-secondary">
-                  Website film dengan menggunakan html, boostrap, dan javascript
+                  Website Film dengan HTML, Bootstrap, dan JavaScript.
                 </p>
               </div>
             </div>
           </div>
-
-          <!-- project-4 -->
-          <div class="col-md-6 mb-4">
+          <!-- Project 4 -->
+          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
             <div class="card shadow-sm">
               <img
                 src="./img/portofolio/4.PNG"
                 class="card-img-top"
-                alt="wedding"
+                alt="Maxtune Bike Shop"
               />
               <div class="card-body">
                 <h5 class="card-title fw-semibold">Maxtune Bike Shop</h5>
                 <p class="card-text text-secondary">
-                  Website Bengkel Motor dengan menggunakan codeigniter,
-                  boostrap, php, html, css, dan javascript
+                  Website Bengkel Motor dengan CodeIgniter, Bootstrap, PHP,
+                  HTML, CSS, dan JavaScript.
                 </p>
               </div>
             </div>
           </div>
-
-          <!-- project-5 -->
-          <div class="col-md-6 mb-4">
+          <!-- Project 5 -->
+          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
             <div class="card shadow-sm">
               <img
                 src="./img/portofolio/admin-projectplanner.PNG"
                 class="card-img-top"
-                alt="wedding"
+                alt="Laravel Project Planner"
               />
               <div class="card-body">
                 <h5 class="card-title fw-semibold">Laravel Project Planner</h5>
                 <p class="card-text text-secondary">
-                  Website project planner dengan menggunakan html, css, php,
-                  laravel 11, vite dan bootstrap.
+                  Website Project Planner dengan Laravel 11, Vite, Bootstrap.
                 </p>
               </div>
             </div>
           </div>
-
-          <!-- project-6 -->
-          <div class="col-md-6 mb-4">
+          <!-- Project 6 -->
+          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
             <div class="card shadow-sm">
               <img
                 src="./img/portofolio/notesapp-react.PNG"
                 class="card-img-top"
-                alt="wedding"
+                alt="React Notes App"
               />
               <div class="card-body">
                 <h5 class="card-title fw-semibold">React Notes App</h5>
                 <p class="card-text text-secondary">
-                  Website aplikasi catatan dengan menggunakan html, css, react,
-                  vite dan javascript
+                  Aplikasi Catatan menggunakan React, Vite, HTML, CSS, dan
+                  JavaScript.
                 </p>
               </div>
             </div>
@@ -378,9 +384,16 @@
     <!-- akhir project -->
 
     <!-- desain -->
-    <section id="design" class="py-5 bg-light">
+    <section
+      id="design"
+      class="py-5 bg-light position-relative overflow-hidden"
+    >
+      <!-- Dekorasi -->
+      <span class="decor-circle" style="top: 20%; right: -60px"></span>
+      <span class="decor-square" style="bottom: 10%; left: -40px"></span>
+
       <div class="container">
-        <div class="text-center mb-5">
+        <div class="text-center mb-5" data-aos="fade-up">
           <h4 class="fw-semibold text-primary mb-2">Desain</h4>
           <h2 class="fw-bold text-dark display-5 mb-4">
             Hasil Desain Aplikasi
@@ -391,32 +404,29 @@
         </div>
 
         <div class="row">
-          <!-- Card 1 -->
-          <div class="col-md-4 mb-4">
+          <!-- Desain 1 -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
             <div class="card shadow-sm h-100">
               <img
                 src="./img/design/imov1.PNG"
                 class="card-img-top"
-                alt="Desain Website 1"
+                alt="Desain Imov Mobile"
               />
               <div class="card-body">
                 <h5 class="card-title fw-semibold">Desain Imov Mobile</h5>
                 <p class="card-text text-secondary">
                   Desain aplikasi modern dengan tampilan clean dan responsif.
                 </p>
-                <!-- Bisa tambahkan link demo jika mau -->
-                <!-- <a href="#" class="btn btn-primary">Lihat Detail</a> -->
               </div>
             </div>
           </div>
-
-          <!-- Card 2 -->
-          <div class="col-md-4 mb-4">
+          <!-- Desain 2 -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
             <div class="card shadow-sm h-100">
               <img
                 src="./img/design/kusuma1.PNG"
                 class="card-img-top"
-                alt="Desain Website 2"
+                alt="Desain Lapangan"
               />
               <div class="card-body">
                 <h5 class="card-title fw-semibold">
@@ -428,14 +438,13 @@
               </div>
             </div>
           </div>
-
-          <!-- Card 3 -->
-          <div class="col-md-4 mb-4">
+          <!-- Desain 3 -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
             <div class="card shadow-sm h-100">
               <img
                 src="./img/design/jaringan-1.PNG"
                 class="card-img-top"
-                alt="Desain Website 3"
+                alt="Desain Jaringan RT/RW"
               />
               <div class="card-body">
                 <h5 class="card-title fw-semibold">Desain Jaringan RT/RW</h5>
@@ -498,7 +507,7 @@
         </div>
 
         <form
-          action="https://formsubmit.co/muqniansyah@gmail.com"
+          action="https://formsubmit.co/69353dc40e571d12d32f8c9f162bacec"
           method="POST"
         >
           <!-- Ganti action dengan alias yang kamu dapat dari FormSubmit -->

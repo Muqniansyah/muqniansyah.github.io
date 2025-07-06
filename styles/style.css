@@ -11,17 +11,87 @@ html {
   scroll-padding-top: 70px;
 }
 
-nav {
-  background-color: #ffffff;
-}
-
+/* Navbar dasar transparan */
 .navbar {
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, padding 0.3s ease;
   background-color: transparent;
 }
 
+/* Saat discroll: background putih */
 .navbar.scrolled {
   background-color: white;
+}
+
+/* Semua link */
+.navbar .nav-link {
+  position: relative;
+  color: white; /* warna default saat transparan */
+  font-weight: normal;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+/* Hover warna saat transparan */
+.navbar .nav-link:hover {
+  color: #ffcb05; /* kuning */
+}
+
+/* Saat navbar discroll: link jadi gelap */
+.navbar.scrolled .nav-link {
+  color: #212529; /* dark grey */
+}
+.navbar.scrolled .nav-link:hover {
+  color: #0d6efd; /* biru Bootstrap */
+}
+
+/* Underline animasi */
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: currentColor; /* warna mengikuti teks */
+  transition: width 0.3s ease;
+}
+
+/* Saat link aktif */
+.navbar .nav-link.active {
+  font-weight: bold;
+}
+
+/* Underline aktif */
+.navbar .nav-link.active::after {
+  width: 100%;
+}
+
+/* Hover underline muncul */
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Logo brand */
+.navbar-brand img {
+  height: 40px;
+  width: auto;
+  max-height: 40px;
+  border-radius: 50%;
+}
+
+/* Mobile: navbar selalu solid */
+@media (max-width: 991px) {
+  .navbar {
+    background-color: white !important;
+  }
+  .navbar .nav-link {
+    color: #212529 !important; /* teks gelap */
+  }
+  .navbar .nav-link:hover {
+    color: #0d6efd !important; /* biru Bootstrap */
+  }
+  .navbar-brand img {
+    height: 30px; /* lebih kecil di layar kecil */
+  }
 }
 
 /* Jumbotron */
@@ -83,6 +153,33 @@ nav {
   to {
     transform: translateY(-10px);
   }
+}
+
+/* servis */
+/* Dekorasi lingkaran */
+.decor-circle {
+  position: absolute;
+  top: 20%;
+  left: -60px;
+  width: 120px;
+  height: 120px;
+  background-color: #ffcb05;
+  border-radius: 50%;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+/* Dekorasi kotak */
+.decor-square {
+  position: absolute;
+  bottom: 10%;
+  right: -40px;
+  width: 80px;
+  height: 80px;
+  background-color: #ffcb05;
+  opacity: 0.2;
+  transform: rotate(15deg);
+  z-index: 0;
 }
 
 /* Footer */
