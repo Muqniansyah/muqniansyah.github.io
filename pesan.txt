@@ -4,5 +4,3 @@ contoh :
 -system analist
 -copywrtiing
 supaya terbuka macam kerjaan buatlo.
-
-layanan

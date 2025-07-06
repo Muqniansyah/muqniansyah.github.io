@@ -39,3 +39,18 @@ window.addEventListener("scroll", function () {
     }
   });
 });
+
+//  Play on klik
+const btn = document.getElementById("play-audio-btn");
+const audio = document.getElementById("bg-music");
+
+btn.addEventListener("click", () => {
+  audio
+    .play()
+    .then(() => {
+      btn.style.display = "none";
+    })
+    .catch((err) => {
+      console.error("Audio play error:", err);
+    });
+});
