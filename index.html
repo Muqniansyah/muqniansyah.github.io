@@ -22,6 +22,12 @@
     <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
+    <!-- Linking Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <!-- My CSS -->
     <link rel="stylesheet" href="./styles/style.css" />
 
@@ -126,7 +132,7 @@
             <div class="d-flex flex-wrap gap-2">
               <a
                 href="#kontak"
-                class="btn btn-primary btn-lg rounded-pill px-4"
+                class="btn btn-primary btn-lg rounded-pill px-4 animate-shake"
               >
                 Hubungi Saya
               </a>
@@ -495,6 +501,34 @@
     </section>
     <!-- akhir social media-->
 
+    <!-- Sertifikasi -->
+    <section id="sertifikasi" class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h4 class="fw-semibold text-primary mb-2">Sertifikasi</h4>
+          <h2 class="fw-bold text-dark display-5 mb-4">
+            Sertifikat & Penghargaan
+          </h2>
+          <p class="fw-medium text-secondary">
+            Berikut beberapa sertifikat yang telah saya peroleh sebagai bukti
+            kompetensi profesional.
+          </p>
+        </div>
+
+        <!-- Swiper Wrapper -->
+        <div class="swiper sertifikat-swiper">
+          <div class="swiper-wrapper" id="sertifikat-wrapper">
+            <!-- Card akan dimasukkan lewat JavaScript -->
+          </div>
+          <!-- Navigasi Swiper -->
+          <div class="swiper-pagination mt-4"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir Sertifikasi -->
+
     <!-- kontak -->
     <section id="kontak" class="kontak py-5 bg-light">
       <div class="container">
@@ -636,6 +670,58 @@
       AOS.init({
         once: true,
       });
+    </script>
+
+    <!-- Linking Swiper script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Custom Script -->
+    <script>
+      fetch("./sertifikat.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const wrapper = document.getElementById("sertifikat-wrapper");
+
+          // Tambahkan setiap data sebagai slide
+          data.forEach((item) => {
+            const slide = document.createElement("div");
+            slide.classList.add("swiper-slide");
+            slide.innerHTML = `
+          <div class="card shadow-sm h-100">
+            <img src="${item.gambar}" class="card-img-top" alt="${item.judul}" />
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">${item.judul}</h5>
+            </div>
+          </div>
+        `;
+            wrapper.appendChild(slide);
+          });
+
+          // Inisialisasi Swiper setelah data ditambahkan ke DOM
+          const swiper = new Swiper(".sertifikat-swiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+              768: {
+                slidesPerView: 2,
+              },
+              992: {
+                slidesPerView: 3,
+              },
+            },
+          });
+        })
+        .catch((err) => {
+          console.error("Gagal memuat data sertifikat:", err);
+        });
     </script>
   </body>
 </html>

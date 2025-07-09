@@ -4,3 +4,5 @@ contoh :
 -system analist
 -copywrtiing
 supaya terbuka macam kerjaan buatlo.
+
+noted: edit file json memerlukan fitur live server.
