@@ -25,7 +25,7 @@ Berikut adalah tahap-tahap umum dalam **preparation data**:
    * Menggabungkan data dari beberapa sumber jika diperlukan.
    * Menyesuaikan format dan struktur agar data bisa digabungkan dengan benar.
 
-4. **Data Transformation (Transformasi Data)**
+4. **Data Transformation (Transformasi Data)** Data Transformation → ubah bentuk fitur agar siap dipakai model.
 
    * Normalisasi atau standarisasi data (misal: skala 0–1 atau z-score).
    * Encoding (mengubah data kategorik menjadi numerik, seperti one-hot encoding).
@@ -37,7 +37,7 @@ Berikut adalah tahap-tahap umum dalam **preparation data**:
    * Melakukan seleksi fitur (feature selection).
    * Menggunakan teknik seperti PCA untuk mengurangi dimensi data.
 
-6. **Splitting Data**
+6. **Splitting Data** Data Splitting → bagi dataset jadi train/test untuk evaluasi model.
 
    * Memisahkan data menjadi **training set** dan **testing set** (jika digunakan untuk machine learning).
 
@@ -217,4 +217,278 @@ Model Results → Menampilkan akurasi, precision, recall, dll.
 Business Insight → Apa arti hasil analisis bagi perusahaan.
 
 Recommendation → Saran aksi nyata untuk HRD atau manajemen.
+
+
+
+
+PENGERTIAN :
+1. akurasi : seberapa banyak model benar.
+2. classification report : detail performa tiap kelas.
+3. confusion matrix : tabel prediksi benar/salah.
+4. ROC curve dan AUC : kemampuan model membedakan kelas.
+5. Model score : nilai akurasi bawaan model.
+6. feature importance : fitur mana paling berpengaruh.
+7. svm adalah Support Vector Machine
+8. Overfitting: Model terlalu pintar “menghafal” data training → hasil di training bagus, tapi di testing jelek
+9. Underfitting: Model terlalu sederhana → tidak bisa tangkap pola data.
+10. Jadi penting cek apakah akurasi di training jauh berbeda dengan testing.
+Kalau training = tinggi, testing = rendah → overfit.
+Kalau dua-duanya rendah → underfit.
+Kalau seimbang → pas.
+
+
+
+
+
+PENJELASAN:
+1. Logistic Regression itu masuk Model Klasifikasi
+
+Namanya memang ada “regression” tapi sebenarnya dipakai untuk klasifikasi biner (misalnya: Depresi / Tidak Depresi, Stay / Resign, Spam / Bukan Spam).
+
+Kenapa? Karena output-nya berupa probabilitas (0–1) → lalu dibulatkan ke label (0 atau 1).
+
+Jadi, Logistic Regression = model klasifikasi.
+
+🔹 2. Perbedaan dengan Model Tipe Lain
+✅ Klasifikasi
+
+Output: label diskrit (kategori).
+
+Contoh: Logistic Regression, Decision Tree, Random Forest, SVM, KNN, Naive Bayes.
+
+Kasus: Prediksi apakah mahasiswa depresi atau tidak.
+
+✅ Regresi
+
+Output: nilai kontinu (angka real).
+
+Contoh: Linear Regression, Ridge, Lasso, SVR.
+
+Kasus: Prediksi nilai IPK mahasiswa, prediksi jumlah jam tidur, prediksi berat badan.
+
+⚠️ Jadi tidak cocok langsung untuk “Depresi / Tidak Depresi”, karena itu bukan angka kontinu.
+
+✅ Clustering (Unsupervised)
+
+Tidak ada label → model hanya mengelompokkan data berdasarkan kemiripan.
+
+Contoh: K-Means, DBSCAN, Hierarchical Clustering.
+
+Kasus: Mengelompokkan mahasiswa berdasarkan pola perilaku (misal: pola tidur, aktivitas organisasi) lalu kita analisis cluster mana yang lebih rentan depresi.
+
+⚠️ Cocok kalau datamu belum punya label “Depresi” atau “Tidak Depresi”.
+
+✅ Asosiasi (Association Rule Learning)
+
+Mencari hubungan antar variabel dalam bentuk aturan.
+
+Contoh: Apriori, FP-Growth.
+
+Kasus: “Mahasiswa yang sering begadang dan jarang olahraga → punya risiko depresi lebih tinggi.”
+
+⚠️ Cocok kalau kamu ingin menemukan pola hubungan antar faktor penyebab depresi, bukan sekadar klasifikasi.
+
+🔹 3. Bisa Dibandingkan?
+
+Kalau dataset sudah ada label (Depresi / Tidak) → yang paling relevan = model klasifikasi (Logistic Regression, Random Forest, SVM, dll).
+
+Kalau dataset angka kontinu (misalnya skor depresi 1–100) → pakai regresi.
+
+Kalau dataset belum ada label → bisa coba clustering untuk eksplorasi.
+
+Kalau tujuanmu mencari pola aturan → bisa pakai asosiasi.
+
+
+## Apakah bisa dibandingkan dengan model lain?
+
+1. Dibandingkan dengan sesama model klasifikasi → bisa & sebaiknya!
+Contoh:
+
+Logistic Regression
+
+Decision Tree
+
+Random Forest
+
+Support Vector Machine (SVM)
+
+K-Nearest Neighbors (KNN)
+
+Naive Bayes
+
+➝ Tujuannya: cari model mana yang paling akurat / stabil / interpretatif di dataset kamu.
+
+2. Dibandingkan dengan model regresi → tidak relevan
+Karena resign/stay bukan angka kontinu, jadi regresi (Linear Regression, Ridge, dll) tidak bisa langsung dipakai.
+
+3. Dibandingkan dengan clustering → bisa, tapi beda tujuan
+
+Klasifikasi: prediksi apakah karyawan resign atau bertahan.
+
+Clustering: mengelompokkan karyawan berdasarkan kesamaan faktor (misal: gaya kerja, lama pengalaman).
+➝ Jadi clustering bisa dipakai untuk eksplorasi tambahan, tapi bukan untuk prediksi langsung.
+
+4. Dibandingkan dengan asosiasi → juga bisa, tapi beda tujuan
+
+Asosiasi bukan untuk prediksi langsung, tapi mencari aturan pola.
+
+Misalnya: “Karyawan yang bekerja >2 tahun dan jarang lembur → cenderung bertahan.”
+➝ Cocok untuk insight manajemen, bukan untuk klasifikasi utama.
+
+✨ Kesimpulan buat kasusmu:
+
+Model utama tetap Klasifikasi (karena target = Resign / Stay).
+
+Tapi kamu bisa pakai clustering/asosiasi sebagai analisis tambahan, bukan untuk dibandingkan kinerjanya.
+
+
+
+
+
+
+## Peran dashboard dan report di data analysis
+
+Dashboard → visualisasi interaktif, menampilkan metrik, tren, dan insight secara real-time atau ringkas. Biasanya berupa grafik, chart, dan indikator kunci. Fungsinya: memudahkan pemantauan dan pengambilan keputusan cepat.
+
+Report → laporan tertulis atau dokumentasi analisis, bisa berupa PDF, Excel, atau dokumen naratif. Berisi hasil analisis, interpretasi, dan rekomendasi. Fungsinya: menyampaikan insight secara formal kepada manajemen atau stakeholder.
+
+
+a.) Di mana letak dashboard
+
+Dashboard akan menjadi:
+
+Visualisasi hasil analisis seperti:
+
+Pie chart: persentase karyawan bertahan vs resign.
+
+Bar chart: ranking faktor paling berpengaruh (Gender, Education, City, dll).
+
+Line chart: tren turnover per tahun/bulan.
+
+Bisa dibuat di tools seperti Power BI, Tableau, Dash, Streamlit, atau bahkan Excel.
+
+Fungsi dashboard di sini: menunjukkan insight model dengan cepat dan bisa interaktif (misal pilih department atau lokasi tertentu).
+
+b.) Di mana letak report
+
+Report akan menjadi:
+
+Dokumentasi tertulis dari seluruh analisis:
+
+Deskripsi dataset (jumlah karyawan, kolom, kategori).
+
+Metodologi preprocessing dan modeling.
+
+Hasil analisis: koefisien, feature importance, interpretasi faktor.
+
+Insight dan rekomendasi: misal “fokus retensi pada karyawan laki-laki dan di New Delhi” atau “perlu program pengembangan untuk lulusan PhD”.
+
+Bisa dibuat dalam bentuk PDF, Word, atau Jupyter Notebook yang berisi narasi + grafik.
+
+###Intinya
+
+Dashboard = visualisasi interaktif dan cepat untuk decision-making.
+
+Report = dokumentasi lengkap analisis dan rekomendasi.
+
+Dari studi kasus kamu:
+
+Dashboard → grafik turnover, ranking faktor, tren per tahun.
+
+Report → dokumen analisis faktor karyawan bertahan/resign + interpretasi dan insight.
+
+
+
+
+
+
+
+-- catatan pengertian --
+
+### 1. **Akurasi**
+
+* **Pengertian:** Persentase prediksi model yang benar dibanding total data uji.
+* **Formula:**
+
+  $$
+  Akurasi = \frac{\text{Jumlah prediksi benar}}{\text{Total data}}
+  $$
+* **Contoh:** Kalau ada 100 data, model benar di 85 → akurasi = 85%.
+
+---
+
+### 2. **Classification Report**
+
+* **Pengertian:** Laporan evaluasi model klasifikasi yang berisi **precision, recall, f1-score, dan support** untuk tiap kelas.
+* **Gunanya:** Supaya tahu performa model **tidak hanya dari akurasi**, tapi juga seberapa baik menangani tiap kelas.
+* **Contoh isi:**
+
+```
+              precision   recall   f1-score   support
+Resign           0.80      0.70      0.75       100
+Stay             0.85      0.90      0.87       200
+```
+
+---
+
+### 3. **Confusion Matrix**
+
+* **Pengertian:** Tabel yang menunjukkan jumlah prediksi benar/salah model untuk tiap kelas.
+* **Isi tabel:**
+
+  * **TP (True Positive)** → Prediksi benar untuk kelas positif.
+  * **TN (True Negative)** → Prediksi benar untuk kelas negatif.
+  * **FP (False Positive)** → Salah prediksi positif padahal negatif.
+  * **FN (False Negative)** → Salah prediksi negatif padahal positif.
+* **Contoh kasus resign/stay:**
+
+|                 | Prediksi Resign | Prediksi Stay |
+| --------------- | --------------- | ------------- |
+| **Resign asli** | 70 (TP)         | 30 (FN)       |
+| **Stay asli**   | 20 (FP)         | 180 (TN)      |
+
+---
+
+### 4. **ROC Curve dan AUC**
+
+* **ROC Curve (Receiver Operating Characteristic):** Grafik yang menampilkan perbandingan **True Positive Rate (Recall)** vs **False Positive Rate** untuk berbagai threshold.
+* **AUC (Area Under Curve):** Luas di bawah kurva ROC. Nilai **0.5** artinya model acak, sedangkan **1.0** artinya model sempurna.
+* **Contoh:** Kalau AUC = 0.85 → model cukup bagus dalam membedakan kelas.
+
+---
+
+### 5. **Model Score**
+
+* **Pengertian:** Nilai skor yang diberikan model berdasarkan metrik tertentu (biasanya default = akurasi untuk model klasifikasi di scikit-learn).
+* **Contoh:**
+
+  ```python
+  model.score(X_test, y_test)
+  ```
+
+  → hasilnya 0.82, artinya akurasi 82%.
+
+---
+
+### 6. **Feature Importance**
+
+* **Pengertian:** Ukuran seberapa besar kontribusi masing-masing fitur terhadap prediksi model.
+* **Tergantung model:**
+
+  * Regresi logistik → pakai koefisien (positif/negatif).
+  * Random Forest / XGBoost → pakai tingkat penurunan impurity atau gain.
+* **Contoh:** Jika “Gender\_Male” punya importance tertinggi, berarti gender adalah faktor paling kuat memengaruhi keputusan model.
+
+---
+
+👉 Jadi, secara singkat:
+
+* **Akurasi** = seberapa banyak model benar.
+* **Classification report** = detail performa tiap kelas.
+* **Confusion matrix** = tabel prediksi benar/salah.
+* **ROC & AUC** = kemampuan model membedakan kelas.
+* **Model score** = nilai akurasi bawaan model.
+* **Feature importance** = fitur mana paling berpengaruh.
+
+---
 
