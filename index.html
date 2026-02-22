@@ -870,19 +870,7 @@
           </p>
         </div>
 
-        <form
-          action="https://formsubmit.co/69353dc40e571d12d32f8c9f162bacec"
-          method="POST"
-        >
-          <!-- Ganti action dengan alias yang kamu dapat dari FormSubmit -->
-          <input type="hidden" name="_captcha" value="true" />
-          <input
-            type="hidden"
-            name="_subject"
-            value="Pesan Baru dari Website"
-          />
-          <input type="hidden" name="_template" value="table" />
-
+        <form id="contact-form">
           <div class="row justify-content-center">
             <div class="col-lg-8">
               <div class="mb-4">
@@ -1004,6 +992,8 @@
 
     <!-- Linking Swiper script -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- EmailJS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <!-- Custom Script -->
     <script>
       fetch("./sertifikat.json")
