@@ -54,31 +54,3 @@ btn.addEventListener("click", () => {
       console.error("Audio play error:", err);
     });
 });
-
-// Inisialisasi EmailJS
-(function () {
-  emailjs.init("csttgHJPWOiqCnmix"); // Ganti dengan Public Key
-})();
-
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("contact-form");
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_z76vz0b", // Ganti Service ID
-        "template_0sxrr0y", // Ganti Template ID
-        this
-      )
-      .then(function () {
-        alert("Pesan berhasil dikirim!");
-        form.reset();
-      })
-      .catch(function (error) {
-        alert("Gagal mengirim pesan.");
-        console.log(error);
-      });
-  });
-});
